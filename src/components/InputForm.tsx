@@ -91,17 +91,17 @@ export default function InputForm({ onSubmit, isLoading = false }: InputFormProp
   };
 
   return (
-    <div className="rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-soft backdrop-blur-sm sm:p-7">
-      <div className="mb-6 border-b border-slate-100 pb-5">
+    <div className="rounded-2xl border border-slate-200/90 bg-white/90 p-7 shadow-soft backdrop-blur-sm sm:p-8">
+      <div className="mb-7 border-b border-slate-100 pb-6">
         <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Brief</h2>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-2 text-sm leading-relaxed text-slate-500">
           We&apos;ll generate both paths from the same inputs.
         </p>
       </div>
 
-      <div className="mb-6">
+      <div className="mb-7">
         <p className={labelClass}>Quick start</p>
-        <div className="mt-2 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-2.5">
           {PRESET_EXAMPLES.map((preset) => (
             <button
               key={preset.name}
@@ -117,7 +117,7 @@ export default function InputForm({ onSubmit, isLoading = false }: InputFormProp
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {[
           { label: "Topic", name: "topic", placeholder: "e.g., Why coaches fail on Instagram" },
           { label: "Niche", name: "niche", placeholder: "e.g., Business coaching" },
@@ -204,7 +204,7 @@ export default function InputForm({ onSubmit, isLoading = false }: InputFormProp
         <button
           type="submit"
           disabled={isLoading}
-          className="group relative mt-2 w-full overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-xl hover:shadow-indigo-500/30 disabled:cursor-not-allowed disabled:opacity-55"
+          className="group relative mt-4 w-full overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/25 transition hover:shadow-xl hover:shadow-indigo-500/30 disabled:cursor-not-allowed disabled:opacity-55"
         >
           <span className="relative z-10">{isLoading ? "Generating…" : "Compare generation methods"}</span>
           <span

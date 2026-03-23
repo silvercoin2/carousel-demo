@@ -49,13 +49,13 @@ export default function ComparisonView({
     "Strategies → filter → insights → style drafts → tournament → rubric + judge";
 
   return (
-    <div className="space-y-8 rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-soft backdrop-blur-sm md:p-8">
-      <div className="relative overflow-hidden rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/90 via-white to-violet-50/50 p-5 sm:p-6">
+    <div className="space-y-8 rounded-2xl border border-slate-200/90 bg-white/90 p-7 shadow-soft backdrop-blur-sm sm:p-8 md:space-y-10 md:p-9">
+      <div className="relative overflow-hidden rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/90 via-white to-violet-50/50 p-6 sm:p-7">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-20 top-0 h-40 w-40 rounded-full bg-violet-200/30 blur-2xl"
         />
-        <div className="relative flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div className="relative flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-5">
           <div>
             <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
               Side-by-side comparison
@@ -97,7 +97,7 @@ export default function ComparisonView({
         )}
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 md:gap-8">
         <div className="relative">
           {winner === "single" && <WinnerRibbon label="Pick ✓" />}
           <ResultCard
@@ -119,9 +119,9 @@ export default function ComparisonView({
         </div>
       </div>
 
-      <div className="rounded-xl border border-slate-200/80 bg-slate-50/80 p-5 backdrop-blur-sm">
+      <div className="rounded-xl border border-slate-200/80 bg-slate-50/80 p-6 backdrop-blur-sm sm:p-7">
         <h3 className="text-sm font-bold uppercase tracking-wide text-slate-500">Key insights</h3>
-        <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-slate-700">
+        <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
           <li className="flex gap-2">
             <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
             <span>
