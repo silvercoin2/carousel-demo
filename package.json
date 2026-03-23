@@ -1,0 +1,27 @@
+{
+  "name": "carousel-pipeline-lab",
+  "version": "1.0.0",
+  "description": "Compare one-shot prompting vs multi-step AI content generation for social media carousels",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "10.4.27",
+    "next": "16.2.0",
+    "openai": "6.32.0",
+    "postcss": "8.5.8",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwindcss": "4.2.2",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2"
+  }
+}

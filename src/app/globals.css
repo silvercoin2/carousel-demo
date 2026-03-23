@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input:disabled,
+select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+
+/* Avoid global transitions that can make frequent UI updates look glitchy. */
+
+/* Design tokens & surfaces */
+:root {
+  --surface-elevated: 0 6px 24px -4px rgb(15 23 42 / 0.07), 0 2px 8px -2px rgb(15 23 42 / 0.04);
+  --ring-focus: 0 0 0 3px rgb(99 102 241 / 0.22);
+  --gradient-brand: linear-gradient(135deg, #2563eb 0%, #4f46e5 45%, #7c3aed 100%);
+}
+
+.shadow-soft {
+  box-shadow: var(--surface-elevated);
+}
+
+.bg-app-mesh {
+  background-color: #f1f5f9;
+  background-image:
+    radial-gradient(at 0% 0%, rgb(219 234 254 / 0.55) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgb(224 231 255 / 0.5) 0px, transparent 45%),
+    radial-gradient(at 100% 100%, rgb(233 213 255 / 0.35) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgb(191 219 254 / 0.4) 0px, transparent 45%);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgb(241 245 249) 0%,
+    rgb(255 255 255) 50%,
+    rgb(241 245 249) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Ensure inputs and selects have consistent focus rings */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
